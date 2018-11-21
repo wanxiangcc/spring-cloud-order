@@ -16,6 +16,7 @@ public class Goods {
     private String goodsSn;
     private String goodsName;
     private Integer clickCount;
+    private Integer isOnSale;
     private BigDecimal shopPrice;
     private BigDecimal marketPrice;
     private Integer goodsNumber;
@@ -64,6 +65,14 @@ public class Goods {
 
     public void setClickCount(Integer clickCount) {
         this.clickCount = clickCount;
+    }
+
+    public Integer getIsOnSale() {
+        return isOnSale;
+    }
+
+    public void setIsOnSale(Integer isOnSale) {
+        this.isOnSale = isOnSale;
     }
 
     public BigDecimal getShopPrice() {
