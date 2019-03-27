@@ -18,8 +18,10 @@
         <module>eureka-server</module>
         <module>goods</module>
         <module>order</module>
+        <module>config</module>
         <module>consumer-test-base</module>
         <module>consumer-test-ribbon</module>
+        <module>consumer-test-feign</module>
     </modules>
 
     <properties>

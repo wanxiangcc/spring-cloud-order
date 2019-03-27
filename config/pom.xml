@@ -6,18 +6,16 @@
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>consumer-test-ribbon</artifactId>
+    <modelVersion>${parent.modelVersion}</modelVersion>
+    <artifactId>config</artifactId>
     <version>${parent.version}</version>
-    <name>consumer-test-ribbon</name>
+    <name>config</name>
+    <description>Demo project for Spring Boot</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 </project>

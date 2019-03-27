@@ -5,11 +5,13 @@
         <groupId>com.wx</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>consumer-test-ribbon</artifactId>
+    <modelVersion>${parent.modelVersion}</modelVersion>
+    <artifactId>consumer-test-feign</artifactId>
     <version>${parent.version}</version>
-    <name>consumer-test-ribbon</name>
+    <name>consumer-test-feign</name>
+    <description>Demo project for Spring Boot</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -17,7 +19,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
     </dependencies>
 </project>
