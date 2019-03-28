@@ -2,9 +2,13 @@ package com.wx.consumer.test.feign;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@RefreshScope
 @RestController
 @RequestMapping("/test")
 public class TestController {
@@ -12,15 +16,18 @@ public class TestController {
     GoodsManager goodsManager;
 
     @Value("${testKey}")
-    String configName;
+    String testKey;
+
+    @Value("${testKey2}")
+    String testKey2;
 
     @RequestMapping("/msg")
     public String msg() {
         return goodsManager.msg();
     }
 
-    @RequestMapping("/config")
-    public String config() {
-        return configName;
+    @RequestMapping(value = "/config", method = RequestMethod.GET)
+    public String config(@RequestParam String key) {
+        return key + testKey;
     }
 }
