@@ -22,6 +22,7 @@
         <module>consumer-test-base</module>
         <module>consumer-test-ribbon</module>
         <module>consumer-test-feign</module>
+        <module>consumer-test-ribbon-hystrix</module>
     </modules>
 
     <properties>
